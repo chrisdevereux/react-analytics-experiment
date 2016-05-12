@@ -1,0 +1,101 @@
+/** Resets **/
+
+input, button {
+  outline: none;
+  background-color: inherit;
+  border: 1px solid lightgrey;
+  border-radius: 3px;
+}
+
+
+/** Components **/
+
+.todos {
+  display: flex;
+  flex-direction: column;
+  
+  font-size: 12px;
+  margin: 1.3em;
+  
+  font-family: -apple-system, '.SFNSText-Regular', 'San Francisco', sans-serif;
+}
+
+.todos-list {
+  border: 1px solid lightgrey;
+  box-shadow: 1px 1px 5px rgba(33, 33, 33, 0.1);
+  
+  padding: 2em;
+  margin: 2em;
+}
+
+.todos-list ul {
+  padding: 0px;
+}
+
+.todos-btn-add {
+  align-self: flex-end;
+  
+  padding: 0.5em 0.7em; 
+  font-size: 1em;
+  font-weight: 500;
+  
+  border: 1px solid #CCC;
+  box-shadow: 1px 1px 5px rgba(33, 33, 33, 0.1);
+}
+
+.todos-btn-add:hover {
+  background-color: #F6F6F6;
+}
+
+.task {
+  display: flex;
+  
+  list-style: none;
+  padding: 0.5em;
+  overflow-y: hidden;
+}
+
+.task-transition-enter {
+  opacity: 0.01;
+  max-height: 0px;
+  padding: 0em;
+  
+  transition: opacity .3s ease-in, max-height .15s ease-in;
+}
+
+.task-transition-enter.task-transition-enter-active {
+  opacity: 1;
+  max-height: 3em;
+  padding: 0.5em;
+}
+
+.task-transition-leave {
+  max-height: 3em;
+  opacity: 1;
+  transition: max-height .15s ease-in, padding .15s ease-in, opacity .3s ease-in;
+}
+
+.task-transition-leave.task-transition-leave-active {
+  max-height: 0;
+  opacity: 0.01;
+  padding: 0px 0.5em;
+}
+
+.task-btn-delete {
+  border: none;
+  
+  font-size: 1.3em;
+}
+
+.task-btn-delete:hover {
+  color: red;
+}
+
+.task-title {
+  padding: 0.5em;
+  width: 100%;
+  
+  font-size: 1em;
+  font-weight: 100;
+  box-shadow: 1px 1px 5px rgba(33, 33, 33, 0.05);
+}
